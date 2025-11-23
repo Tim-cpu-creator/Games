@@ -429,6 +429,10 @@ class FollowerBullet(pygame.sprite.Sprite):
     
     def update(self):
         """小跟班子弹移动"""
+        # 冻结时不移动
+        if self.state is not None and getattr(self.state, 'freeze_mode', False):
+            return
+
         vx, vy = self.velocity
         self.rect.x += vx
         self.rect.y += vy
