@@ -1,2 +1,2 @@
-# useless
+# Games
 some interesting games
